@@ -39,5 +39,7 @@ Adding a "not in the mood" button to the results. This will keep the user input,
 
 Adding a start over button, which will clear the user input JSON (except the weather info) and scroll them to the top to start over. Without having to refresh page.
 
+Adding an intro page that fades out, like Zoe Adelman's Handy ASL.
+
 ##PivotalTracker
 [G19 - Valerie Kraucunas](https://www.pivotaltracker.com/n/projects/1525387)

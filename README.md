@@ -11,7 +11,8 @@ I will be using HTML, CSS, JavaScript, jQuery to build the site structure and fu
 
 This project will send AJAX calls to the Trello API, jsonIP.com, freegeoIP.net, and forecast.io.
 
-*####Why weather?
+*Why weather?
+
 After the user has made all their selections, a final piece of data based on the weather will be added to the JSON that will be entered into my function. Basically, if it is 80 degrees outside, you don't want to make a recipe that includes more than 30 minutes of oven time.*
 
 ##The User Experience

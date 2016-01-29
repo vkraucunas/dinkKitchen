@@ -7,7 +7,7 @@ My project will be a dinner selector, using my own Trello list as a database. I 
 In repo as mockup1.png
 
 ##Technologies
-I will be using HTML, CSS, JavaScript, jQuery to build the site structure and functionality. I want to build 2 pages: the landing/home page, as well as a pantry items page. The homepage will be an interactive long form, that as you make a selection, it scrolls you forward to the next logical step. The pantry page will be a static list of pantry staples, simply a complement to the main functionality.
+I will be using HTML, CSS, Bootstrap, JavaScript, jQuery to build the site structure and functionality. I want to build 2 pages: the landing/home page, as well as a pantry items page. The homepage will be an interactive long form, that as you make a selection, it scrolls you forward to the next logical step. The pantry page will be a static list of pantry staples, simply a complement to the main functionality.
 
 This project will send AJAX calls to the Trello API, jsonIP.com, freegeoIP.net, and forecast.io.
 

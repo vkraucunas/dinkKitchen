@@ -4,7 +4,7 @@
 My project will be a dinner selector, using my own Trello list as a database. I have shown my meal planning Trello list to many with awed response being the most common. It will be for those who have intermediate level cooking skills and lackluster decision-making skills. I am calling it "DINK Kitchen", as in "Dual Income No Kids", since some recipes take a decent amount of time and probably couldn't be executed with brats running around.
 
 ##Mockup
-(mockup1.png)
+In repo as mockup1.png
 
 ##Technologies
 I will be using HTML, CSS, JavaScript, jQuery to build the site structure and functionality. I want to build 2 pages: the landing/home page, as well as a pantry items page. The homepage will be an interactive long form, that as you make a selection, it scrolls you forward to the next logical step. The pantry page will be a static list of pantry staples, simply a complement to the main functionality.

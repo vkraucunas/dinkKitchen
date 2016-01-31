@@ -1,9 +1,11 @@
 #chicken {
   background-color: #e09f7d;
+  border-color: #a09f7c;
 }
 
 #pork {
   background-color: #ca6660;
+  border-color: #aa6650;
 }
 /*!
  * Bootstrap v3.2
@@ -284,14 +286,20 @@ th {
 html {
   font-size: 10px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: transparent;
+  background: url('tile.png') repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: 100% 100%;
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
-  background-image: url('wood.png');
-  background-repeat: no-repeat;
+  text-align: center;
+
 }
 input,
 button,
@@ -2300,8 +2308,8 @@ fieldset[disabled] .btn-primary.active {
 }
 .btn-success {
   color: #ffffff;
-  background-color: #1f4a0c;
-  border-color: #163408;
+  background-color: #3C8F18;
+  border-color: #2D6B12;
 }
 .btn-success:hover,
 .btn-success:focus,

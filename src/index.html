@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8">
     <title>Dink Kitchen</title>
-
-    <!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"> -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
@@ -78,20 +76,38 @@
           <button class="btn btn-danger">Nah, I'm good</button>
         </div>
         <div class="row">
-          <button class="btn btn-success">Go >>></button>
+          <button class="btn btn-success btn-lg" id="submit">Go >>></button>
         </div>
       </div>
-
 
       <div class="container well" id="results">
         <div class="row">
-
+          <h2>Results</h2>
+          <h4 id="entreeResult"></h4>
+          <a id="entreeRecipe" href="#"></a>
+        </div>
+        <div class="row">
+        <h4 id="sideResult"></h4>
+          <a id="sideRecipe" href="#"></a>
         </div>
       </div>
-
     </section>
 
+    <footer>
+      <div class="container-fluid bg-success">
+        <div class="row">
+            <h4>Extras</h4>
+            <ul>
+              <li><a href="pantry.html">Pantry Staples</a></li>
+              <li><a href="#">Suggest a Recipe</a></li>
+              <li>Want more? <a href="https://www.pinterest.com/flatlanderesque/where-is-the-savory/" target="blank">Visit my Pinterest Dinner Board</a></li>
+          </div>
+        </div>
+      </div>
+    </footer>
+
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://api.trello.com/1/client.js?key=c08e97c955fd88aba5f367ed9c47c0d4"></script>
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 

@@ -7,6 +7,15 @@
   background-color: #ca6660;
   border-color: #aa6650;
 }
+
+.btn {
+  margin: 16px;
+}
+
+footer ul {
+
+  list-style: none;
+}
 /*!
  * Bootstrap v3.2
  *
@@ -286,12 +295,6 @@ th {
 html {
   font-size: 10px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    background-color: transparent;
-  background: url('tile.png') repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: 100% 100%;
 }
 body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -299,7 +302,7 @@ body {
   line-height: 1.428571429;
   color: #333333;
   text-align: center;
-
+  background-color: #614951;
 }
 input,
 button,

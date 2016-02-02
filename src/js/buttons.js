@@ -50,22 +50,22 @@ $(document).ready(function() {
   })
 
   $('#beef').on('click', function() {
-    choices.meats.push('beef');
+    choices.meats.push('Beef');
     console.log(choices);
   })
 
   $('#chicken').on('click', function() {
-    choices.meats.push('chicken');
+    choices.meats.push('Chicken');
     console.log(choices);
   })
 
   $('#fish').on('click', function() {
-    choices.meats.push('fish');
+    choices.meats.push('Fish');
     console.log(choices);
   })
 
   $('#pork').on('click', function() {
-    choices.meats.push('pork');
+    choices.meats.push('Pork');
     console.log(choices);
   })
 
@@ -131,19 +131,86 @@ $(document).ready(function() {
     $($wholeThing).animate({
         scrollTop: $('#results').offset().top
     }, 500);
-//run UserInput on var choices
+//run filterAll using var choices & entree cards
   })
 
 
 
+  var filterMeat = function(userChoicesObj, trelloCards) {
+    var result = [];
+    if (userChoicesObj.veggie) {
+      trelloCards.filter(function (card) {
+        for ( var i = 0; i < card.labels.length; i++ ) {
+          if (card.labels[i].name === 'Vegetarian') {
+            result.push(card);
+          }
+        }
+      });
+    }
+    if (userChoicesObj.meat) {
+      trelloCards.filter(function (card) {
+        for ( var i = 0; i < card.labels.length; i++ ) {
+          for ( var j = 0; j < userChoicesObj.meats.length; j++) {
+            if (userChoicesObj.meats[j] === 'beef' && card.labels[i].name === 'Beef') {
+              result.push(card);
+            }
+            if (userChoicesObj.meats[j] ==='chicken' && card.labels[i].name === 'Chicken') {
+              result.push(card);
+            }
+            if (userChoicesObj.meats[j] === 'pork' && card.labels[i].name === 'Pork') {
+              result.push(card);
+            }
+            if (userChoicesObj.meats[j] === 'fish' && card.labels[i].name === 'Fish') {
+              result.push(card);
+            }
+          }
+        }
+      })
+    }
+    return result;
+  };
+
+  var filterWeight = function(userChoicesObj, trelloCards) {
+    var step1 = filterMeat(userChoicesObj, trelloCards);
+    var result = [];
+    step1.filter(function (card) {
+      for ( var i = 0; i < card.labels.length; i++ ) {
+        if (userChoicesObj.weight === 'light' && card.labels[i].name === 'Light') {
+          result.push(card);
+        }
+        if (userChoicesObj.weight ==='comfort' && card.labels[i].name === 'Comfort') {
+          result.push(card);
+        }
+      }
+      if (userChoicesObj.weight === 'either') {
+          result.push(card);
+        }
+    })
+    return result;
+  }
+
+  var filterTime = function(userChoicesObj, trelloCards) {
+    var step2 = filterWeight(userChoicesObj, trelloCards);
+    var result = [];
+    step2.filter(function (card) {
+      for ( var i = 0; i < card.labels.length; i++ ) {
+        if (userChoicesObj.time === 'quick' && card.labels[i].name === 'Quick') {
+          result.push(card);
+        }
+        if (userChoicesObj.time ==='slow' && card.labels[i].name === 'Slow') {
+          result.push(card);
+        }
+        if (userChoicesObj.time ==='slowCooker' && card.labels[i].name === 'slowCooker') {
+          result.push(card);
+        }
+        if (userChoicesObj.time ==='quickAndSlow' && (card.labels[i].name == 'Slow' || card.labels[i].name === 'Quick')) {
+          result.push(card);
+        }
+      }
+    })
+    console.log("total results:", result);
+  }
 
 
-
-
-
-
-
-
-
-
+//document.ready closer. no touchy.
 });

@@ -1,3 +1,7 @@
+#results {
+  margin-bottom: 50px;
+}
+
 #chicken {
   background-color: #e09f7d;
   border-color: #a09f7c;
@@ -33,6 +37,8 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 body {
+  height: 100%;
+  width: 100%;
   margin: 0;
 }
 article,
@@ -302,7 +308,7 @@ body {
   line-height: 1.428571429;
   color: #333333;
   text-align: center;
-  background-color: #614951;
+  /*background-color: #614951;*/
 }
 input,
 button,
@@ -588,7 +594,7 @@ a.bg-primary:hover {
   background-color: #152337;
 }
 .bg-success {
-  background-color: #dff0d8;
+  background-color: rgba(238, 240, 216, .6);
 }
 a.bg-success:hover {
   background-color: #c1e2b3;
@@ -5602,7 +5608,7 @@ a.list-group-item-danger.active:focus {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: rgba(192, 214, 223,.6);
+  background-color: rgba(230, 210, 197,.7);
   border: 1px solid #e3e3e3;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -6508,4 +6514,14 @@ button.close {
   .hidden-print {
     display: none !important;
   }
+}
+
+.container {
+  min-height: 100%;
+  padding: 200px;
+}
+
+body {
+  background-image: url('../wood.png');
+  background-repeat: cover;
 }

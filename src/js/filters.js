@@ -32,7 +32,7 @@ var filterMeat = function(userChoicesObj, trelloCards) {
             }
           }
         }
-      })
+      });
     }
     console.log("filterMeat results:", result);
     return result;
@@ -54,10 +54,10 @@ var filterMeat = function(userChoicesObj, trelloCards) {
       if (userChoicesObj.weight === 'either') {
           result.push(card);
         }
-    })
+    });
     console.log("filterWeight results:", result);
     return result;
-  }
+  };
 
   var filterTime = function(userChoicesObj, trelloCards) {
     var step2 = filterWeight(userChoicesObj, trelloCards);
@@ -78,38 +78,86 @@ var filterMeat = function(userChoicesObj, trelloCards) {
           result.push(card);
         }
       }
-    })
+    });
     console.log("filterTime results:", result);
     return result;
-  }
+  };
 
   var filterTemp = function(userChoicesObj, trelloCards, temperature) {
     var step3 = filterTime(userChoicesObj, trelloCards);
     var result = [];
     result = step3.filter(function (card) {
        var trelloLabels = card.labels.map(function(value){return value.name;});
-       function isWinterFood(value) {return trelloLabels.includes("weatherCool")}
-       function isSummerFood(value) {return trelloLabels.includes("weatherHot")}
+       function isWinterFood(value) {
+        return trelloLabels.includes("weatherCool");
+        }
+       function isSummerFood(value) {
+        return trelloLabels.includes("weatherHot");
+        }
        if (temperature < 65) {
          return isWinterFood(card);
        } else {
          return isSummerFood(card);
        }
-    })
+    });
+    console.log("filterTemp results:", result);
     return result;
-  }
+  };
 
   var pickOutOne = function(userChoicesObj, trelloCards, temperature) {
     var step4 = filterTemp(userChoicesObj, trelloCards, temperature);
     var endResult = step4[Math.floor(Math.random()*step4.length)];
     $('#entreeResult').html(endResult.name);
     $('#entreeRecipe').attr('href', endResult.desc);
+
+    if (choices.side) {
+      $('#sideRecipe').show();
+      var sideInfo = chooseSide(endResult, userChoicesObj);
+      var sideRun = filterTemp(sideInfo, sideCards, temp);
+      var sideResult = sideRun[Math.floor(Math.random()*sideRun.length)];
+      console.log("sideResult is", sideResult);
+      $('#sideResult').html(sideResult.name);
+      $('#sideRecipe').attr('href', sideResult.desc);
+    }
+
+  };
+
+ function chooseSide(entreeInfo, obj) {
+  var side = {
+    meats: []
+  };
+  console.log("entreeInfo: ",entreeInfo);
+  console.log("userChoicesObj: ", obj);
+  if (obj.meats === null) {
+    side.veggie = true;
+    side.meat = false;
+  } else {
+    side.veggie = false;
+    side.meat = true;
+    var entreeLabels = entreeInfo.labels;
+    entreeLabels.filter(function (label) {
+      for (var i=0; i < entreeLabels.length; i++) {
+          if (label.name.toLowerCase() === "beef") {
+            side.meats.push('beef');
+          }
+          if (label.name.toLowerCase() === "chicken") {
+            side.meats.push('chicken');
+          }
+          if (label.name.toLowerCase() === "fish") {
+            side.meats.push('fish');
+          }
+          if (label.name.toLowerCase() === "pork") {
+            side.meats.push('pork');
+          }
+      }
+    });
+    console.log("side meats is a thing", side.meats);
   }
-
-
-
-
-
+  side.weight = obj.weight;
+  side.time = obj.time;
+  console.log("side object is", side);
+  return side;
+  }
 
 
 

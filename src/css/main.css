@@ -16,21 +16,8 @@
   margin: 16px;
 }
 
-footer ul {
 
-  list-style: none;
-}
-/*!
- * Bootstrap v3.2
- *
- * Copyright 2014 Twitter, Inc
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Designed and built with all the love in the world by @mdo and @fat.
- * BootSwatchr built and provided by @DrewStrickland
- */
-/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6524,4 +6511,8 @@ button.close {
 body {
   background-image: url('../wood.png');
   background-repeat: cover;
+}
+
+footer div.row {
+  padding: 30px;
 }

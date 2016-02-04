@@ -19,7 +19,7 @@ var getFunction = function(url, key) {
   });
 };
 
-getFunction('http//jsonip.com', 'ip').then(function(ip) {
+getFunction('//jsonip.com', 'ip').then(function(ip) {
   var IP = ip;
   var newURL = "//freegeoip.net/json/"+IP;
   return getFunction(newURL, 'city');

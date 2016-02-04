@@ -23,7 +23,7 @@ $(document).on('ready', function() {
 
 
 
-  getFunction('http://jsoni.com', 'ip').then(function(ip) {
+  getFunction('//api.ipify.org/?format=json', 'ip').then(function(ip) {
     console.log('success!');
     var IP = ip;
     var newURL = "https://freegeoip.net/json/"+IP;
@@ -35,11 +35,13 @@ $(document).on('ready', function() {
     return getFunction(newURL, 'city');
   }).then(function(city) {
     var City = city;
-    var lastURL = 'http://api.openweathermap.org/data/2.5/weather?q='+City+'&units=imperial&APPID=f708ff06c29d9c50b54499dfec6a5a05';
-    return getFunction(lastURL, 'main').then(function (main) {
-      temp = Math.floor(main.temp);
-      console.log("Temp variable", temp);
-    });
+    // var lastURL = 'http://api.openweathermap.org/data/2.5/weather?q='+City+'&units=imperial&APPID=f708ff06c29d9c50b54499dfec6a5a05';
+    // return getFunction(lastURL, 'main').then(function (main) {
+    //   temp = Math.floor(main.temp);
+    //   console.log("Temp variable", temp);
+    // });
+    temp = 32;
+    console.log("Temp variable", temp);
   });
 
   var Trello = $.ajax({

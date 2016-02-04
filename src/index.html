@@ -3,14 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>Dink Kitchen</title>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="css/main.css">
   </head>
   <body>
-    <header class="page-header">
+    <header class="page-header" autofocus>
       <div class="container-fluid">
-        <h1>DINK Kitchen</h1>
-        <h2 class="fancy">DINK: Dual Income No Kids</h2>
-
+        <a href="index.html"><img src="../logo4.png" alt="Dink Kitchen logo"></a>
+        <h4 class="header"><em>A dinner selection tool for those who enjoy cooking and have <span>kid-free time</span> fewer interruptions to do so.</em></h4>
       </div>
     </header>
 
@@ -30,8 +30,8 @@
           <h3>This meal should be....</h3>
         </div>
         <div class="row">
-          <button class="btn btn-success" id="veggie">Vegetarian</button>
-          <button class="btn btn-danger" id="meat">Meatatarian</button>
+          <button class="btn btn-success btn-lg" id="veggie">Vegetarian</button>
+          <button class="btn btn-danger btn-lg" id="meat">Meatatarian</button>
         </div>
       </div>
 
@@ -40,10 +40,10 @@
           <h3>MEAT MEAT MEAT!</h3>
         </div>
         <div class="row">
-          <button class="btn btn-danger meats" id="beef">Beef</button>
-          <button class="btn btn-primary meats" id="chicken">Chicken</button>
-          <button class="btn btn-warning meats" id="fish">Fish</button>
-          <button class="btn btn-primary meats" id="pork">Pork</button>
+          <button class="btn btn-danger meats btn-lg" id="beef">Beef</button>
+          <button class="btn btn-primary meats btn-lg" id="chicken">Poultry</button>
+          <button class="btn btn-warning meats btn-lg" id="fish">Fish</button>
+          <button class="btn btn-primary meats btn-lg" id="pork">Pork</button>
         </div>
         <div class="row">
           <button class="btn btn-success" id="onward"> >> </button>
@@ -55,9 +55,9 @@
           <h3>This meal needs to be...</h3>
         </div>
         <div class="row">
-          <button class="btn btn-success" id="light">Light</button>
-          <button class="btn btn-info" id="comfort">Comfort</button>
-          <button class="btn btn-warning" id="non">No Preference</button>
+          <button class="btn btn-success btn-lg" id="light">Light</button>
+          <button class="btn btn-info btn-lg" id="comfort">Comfort</button>
+          <button class="btn btn-warning btn-lg" id="non">No Preference</button>
         </div>
       </div>
 
@@ -66,9 +66,9 @@
           <h3>Meal relationship status</h3>
         </div>
         <div class="row">
-          <button class="btn btn-primary" id="quick">Quickie</button>
-          <button class="btn btn-danger" id="slow">Labor of Love</button>
-          <button class="btn btn-warning" id="slowCooker">Slow Cooker</button>
+          <button class="btn btn-primary btn-lg" id="quick">Quickie</button>
+          <button class="btn btn-danger btn-lg" id="slow">Labor of Love</button>
+          <button class="btn btn-warning btn-lg" id="slowCooker">Slow Cooker</button>
         </div>
       </div>
 
@@ -77,8 +77,8 @@
           <h3>Side recommendation?</h3>
         </div>
         <div class="row">
-          <button class="btn btn-primary" id="yes">Heck yes</button>
-          <button class="btn btn-danger" id="no">Nah, I'm good</button>
+          <button class="btn btn-primary btn-lg" id="yes">Heck yes</button>
+          <button class="btn btn-danger btn-lg" id="no">Nah, I'm good</button>
         </div>
         <div class="row">
           <button class="btn btn-success btn-lg" id="submit">Go >>></button>
@@ -88,6 +88,7 @@
       <div class="container well" id="results">
         <div class="row">
           <h2>Results</h2>
+          <br>
           <h4 id="entreeResult"></h4>
           <a id="entreeRecipe" href target="_blank">Recipe</a>
         </div>
@@ -104,16 +105,16 @@
             <h4>Extras</h4>
               <a href="pantry.html">Pantry Staples</a><br>
               <a href="#">Suggest a Recipe</a><br>
-              <a href="https://www.pinterest.com/flatlanderesque/where-is-the-savory/" target="blank">Want more? Visit my Pinterest Dinner Board</a>
+              <a href="//www.pinterest.com/flatlanderesque/where-is-the-savory/" target="blank">Want more? Visit my Pinterest Dinner Board</a>
           </div>
         </div>
       </div>
     </footer>
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://api.trello.com/1/client.js?key=c08e97c955fd88aba5f367ed9c47c0d4"></script>
+    <script src="//code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="//api.trello.com/1/client.js?key=c08e97c955fd88aba5f367ed9c47c0d4"></script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <script type="text/javascript" src="js/main.js"></script>
     <script type="text/javascript" src="js/filters.js"></script>

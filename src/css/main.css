@@ -7,9 +7,31 @@
   border-color: #a09f7c;
 }
 
+#chicken:hover,
+#chicken:focus,
+#chicken.focus,
+#chicken:active,
+#chicken.active,
+.open > .dropdown-toggle#chicken {
+  color: #ffffff;
+  background-color: #B58165;
+  border-color: #e09f7d;
+}
+
 #pork {
   background-color: #ca6660;
   border-color: #aa6650;
+}
+
+#pork:hover,
+#pork:focus,
+#pork.focus,
+#pork:active,
+#pork.active,
+.open > .dropdown-toggle#pork {
+  color: #ffffff;
+  background-color: #F07A73;
+  border-color: #ca6660;
 }
 
 .btn {
@@ -19,7 +41,7 @@
 
 
 html {
-  font-family: sans-serif;
+  font-family: "Roboto";
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -290,7 +312,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -2404,7 +2426,7 @@ fieldset[disabled] .btn-info.active {
 .btn-warning.active,
 .open > .dropdown-toggle.btn-warning {
   color: #ffffff;
-  background-color: #c83a11;
+  background-color: #DB7000;
   border-color: #a7310e;
 }
 .btn-warning:active,
@@ -5595,8 +5617,8 @@ a.list-group-item-danger.active:focus {
   min-height: 20px;
   padding: 19px;
   margin-bottom: 20px;
-  background-color: rgba(230, 210, 197,.7);
-  border: 1px solid #e3e3e3;
+  background-color: rgba(230, 210, 210,.6);
+  border: 1px solid #D5C67A;
   border-radius: 4px;
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -6505,7 +6527,7 @@ button.close {
 
 .container {
   min-height: 100%;
-  padding: 200px;
+  padding: 200px 200px 200px 200px;
 }
 
 body {
@@ -6513,6 +6535,34 @@ body {
   background-repeat: cover;
 }
 
+#step1 {
+  padding-top: 90px;
+}
+
+#step2, #step3, #step4, #step5, #step6, #results {
+  height: 100vh;
+}
+
 footer div.row {
   padding: 30px;
+}
+
+h4 span {
+  text-decoration: line-through;
+}
+
+li {
+  text-align: left;
+}
+
+div.pantry {
+  padding-top: 100px;
+}
+
+h2, h3 {
+  margin-bottom: 20px;
+}
+
+.results a {
+  margin-bottom: 20px;
 }

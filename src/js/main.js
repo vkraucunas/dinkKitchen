@@ -17,7 +17,10 @@ $(document).on('ready', function() {
       })
       .fail(function (error){
         reject(error);
-      });
+      })
+      .catch(function (res) {
+        reject(res);
+      })
     });
   };
 

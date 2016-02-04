@@ -17,6 +17,9 @@ $(document).on('ready', function() {
       })
       .fail(function (error){
         reject(error);
+      })
+      .always(function() {
+        reject('error');
       });
     });
   };

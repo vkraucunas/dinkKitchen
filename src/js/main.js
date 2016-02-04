@@ -11,14 +11,25 @@ $(document).on('ready', function() {
 
   var getFunction = function(url, key) {
     return new Promise(function (resolve, reject) {
-      $.get(url).done(function (response) {
-          resolve(response[key]);
-        });
+      $.get(url)
+      .done(function (response) {
+        resolve(response[key]);
+      })
+      .fail(function (error){
+        reject(error);
+      });
     });
   };
 
+
+
   getFunction('http://jsonip.com', 'ip').then(function(ip) {
     var IP = ip;
+    var newURL = "https://freegeoip.net/json/"+IP;
+    return getFunction(newURL, 'city');
+  }, function() {
+    console.log('hit the error handler!');
+    var IP = '128.177.172.220';
     var newURL = "https://freegeoip.net/json/"+IP;
     return getFunction(newURL, 'city');
   }).then(function(city) {

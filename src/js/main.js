@@ -15,9 +15,6 @@ $(document).on('ready', function() {
       .done(function (response) {
         resolve(response[key]);
       })
-      .fail(function (error){
-        reject(error);
-      })
       .always(function() {
         reject('error');
       });
@@ -26,7 +23,8 @@ $(document).on('ready', function() {
 
 
 
-  getFunction('http://jsonip.com', 'ip').then(function(ip) {
+  getFunction('http://jsoni.com', 'ip').then(function(ip) {
+    console.log('success!');
     var IP = ip;
     var newURL = "https://freegeoip.net/json/"+IP;
     return getFunction(newURL, 'city');
